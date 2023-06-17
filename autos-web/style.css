@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -14,6 +14,13 @@
     --main-color: #313131;
     --text-color: black;
     --bg-color: #fbf7f5;
+    --btn-color: #555555;
+}
+section{
+    padding: 4rem 0 2rem;
+}
+.img{
+    width: 100%;
 }
 .container{
     max-width: 1068px;
@@ -39,18 +46,49 @@ header{
     cursor: pointer;
     color: var(--text-color);
     display: none;
+    user-select: none;
 }
 .navbar{
     display: flex;
     column-gap: 2rem;
+    user-select: none;
 }
 .navbar a{
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 15px;
     text-transform: uppercase;
-    font-weight: 500;
 }
-.navbar a:hover{
+.navbar a:hover,
+.navbar .active{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
+}
+.logo{
+    font-family: 'Kanit', sans-serif;
+    border:none;
+    outline:none;
+    text-decoration:none;
+    color: var(--text-color);
+    user-select: none;
+    font-size: x-large;
+    font-weight: 500;
+}
+.home{
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;    
+}
+.btn{
+    border:none;
+    outline:none;
+    text-decoration:none;
+    color: var(--btn-color);
+    user-select: none;
 }
