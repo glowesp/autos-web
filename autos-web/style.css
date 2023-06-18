@@ -10,6 +10,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --main-color: #313131;
     --text-color: black;
@@ -80,16 +83,15 @@ header.shadow{
     font-weight: 500;
 }
 .home{
-    max-width: 1300px;
+    max-width: 100%;
     margin: auto;
-    width: 100%;
-    min-height: 640px;
+    min-height: 760px;
     display: flex;
     align-items: center;
-    background: url(img/iris.jpg);
+    background: url(img/bckgrnd.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center left;    
+    background-position: center left;
 }
 .btn{
     border:none;
@@ -104,6 +106,9 @@ header.shadow{
 }
 .btn:hover{
     background: #1f1f1f;
+}
+.home-text{
+    padding-left: 180px;
 }
 .home-text h1{
     font-size: 2.2rem;
@@ -196,8 +201,9 @@ header.shadow{
     text-align: center;
 }
 .copyright{
-    padding: 20px;
+    padding: 2rem;
     color: var(--bg-color);
+    background: black;
 }
 .about .box{
     flex: 1 1 17rem;
@@ -237,10 +243,10 @@ header.shadow{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-@media (max-width:1080p){
+@media (max-width:1080px){
     .container{
         margin-left: 1rem;
-        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 @media (max-width: 991px){
@@ -248,14 +254,15 @@ header.shadow{
         padding: 15px 20px;
     }
     section{
-        padding: 3rem 0 1rem;
+        padding: 3rem 0 1 rem;
     }
     .home-text{
-        padding-left: 1rem;
+        padding-left: 2rem;
     }
     .home-text h1{
         font-size: 2.1rem;
     }
+
 }
 @media (max-width: 768px){
     .nav{
@@ -264,28 +271,61 @@ header.shadow{
     #menu-icon {
         display: initial;
     }
-    .navbar{
+    .navbar {
         position: absolute;
         top: 100%;
         right: 0;
         left: 0;
         display: flex;
         flex-direction: column;
-        row-gap: 0.5rem;
+        row-gap: 0.5;
         text-align: center;
-        box-shadow: 4px 4px 20px rgb(15 54 55 / 20%);
+        background: var(--bg-color);
+        box-shadow: 4px 4px 20px rgb(14 45 55 / 20%);
+        clip-path: circle(0% at 0% 0%);
+        transition: 0.5s;
     }
     .navbar a{
         display: block;
         padding: 15px;
     }
-    .navbar a:hover,
-    .nav .active{
+    .navbar.active {
+        clip-path: circle(144% at 0% 0%);
+    }
+    .navbar a:hover, .navbar .active{
         border-bottom: none;
         background: var(--main-color);
         color: var(--bg-color);
     }
-    .logo{
-        display: none;
+    .box{
+        padding: 4px;
+    }
+}
+@media (max-width: 727px){
+    .heading span{
+        font-size: 0.rem;
+    }
+    .heading h2{
+        font-size: 1.4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-text{
+        text-align: center;
+    }
+    .about-text h2{
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 360px){
+    .home{
+        min-height: 500px;
+    }
+    .home-text h1{
+        font-size: 2rem;
+    }
+    .home-text p br{
+        display: contents;
     }
 }
