@@ -24,13 +24,16 @@
                 </div>
             </header>
             <section class="contact-form container">
-                <form action=”mailto:zhengyang2009@hotmail.com” method=”POST” enctype=”text/plain” name=”EmailForm”>
+                <form action="https://formsubmit.co/zhengyang2009@hotmail.com" method="POST">
 
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="text" id="fname" name="firstname" placeholder="first name">
                 
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <input type="text" id="lname" name="lastname" placeholder="last name">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="email">
                 
                     <label for="country">Country</label>
                     <select id="country" name="country">
@@ -40,9 +43,9 @@
                     </select>
                 
                     <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="enquire about a car..." style="height:200px"></textarea>
+                    <textarea id="subject" name="subject" type="subject" placeholder="enquire about a car..." style="height:200px"></textarea>
                 
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" name="_next" value="https://yourdomain.co/thanks.html">
                 
                   </form>
             </section>
